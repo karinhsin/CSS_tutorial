@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cube demo</title >
+        <style>
+            .camera{
+                width: 200px;
+                height: 200px;
+                perspective:800px;
+                margin: 50px;
+                perspective-origin: 50% -150px ;
+            }
+            .cube{
+                transform-style: preserve-3d;
+                position: relative;
+                /* animation: cube-rotateX 10s infinite linear; */
+                animation: cube-rotateY 5s infinite linear;
+                /* 無止境一直轉10秒，沒加線性的話會中間變快前後變慢 */
+                /* 加了才會等速旋轉 */
+            }
+            .cube:hover{
+                animation:cube-rotateX 5s infinite linear;
+            }
+            .cube div{
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                text-align: center;
+                line-height: 200px;
+
+            }
+            .left{
+                background-color: rgba(170, 255, 170, 0.5);
+                transform:rotateY(-90deg) translateZ(100px);
+            }
+            .right{
+                background-color: rgba(255, 170, 255, 0.5);
+                transform:rotateY(90deg) translateZ(100px);
+                /* 先轉90度在中間變成一條線（旋轉） 再往前位移100px */
+            }
+            .top{
+                background-color: rgba(255, 255, 170, 0.5);
+                transform:rotateX(90deg) translateZ(100px);
+
+            }
+            .bottom{
+                background-color: rgba(255, 170, 170, 0.5);
+                transform:rotateX(-90deg) translateZ(100px);
+            }
+            .front{
+                background-color: rgba(170, 255, 255, 0.5);
+                transform:translateZ(100px);
+            }
+            .back{
+                background-color: rgba(170, 170, 255, 0.5);
+                transform:rotateY(180deg) translateZ(100px);
+            }
+            @keyframes cube-rotateX{
+                from {
+                    transform:rotateX(0);
+                }
+                to{
+                    transform:rotateX(360deg);
+                }
+            }
+             @keyframes cube-rotateY{
+                from {
+                    transform:rotateY(0);
+                }
+                to{
+                    transform:rotateY(360deg);
+                }
+            }
+        </style>
+</head>
+<body>
+    <div class="camera">  
+        <!-- camera表示視角/場景 -->
+        <div class="cube">
+            <!-- cube是方塊，可以控制所有立體物件，一次控制六個面 -->
+            <div class="left">左</div>
+            <div class="right">右</div>
+            <div class="top">上</div>
+            <div class="bottom">下</div>
+            <div class="front">前</div>
+            <div class="back">後</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
