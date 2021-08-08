@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tp tea navbar 茶湯會navbar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            body{
+                height: 300vh;
+            }
+
+            nav{
+                background: url(./茶湯會/menuBg.jpg);
+                padding: 20px;
+                width: 100%;
+                /* 為了banner圖片下的寬 */
+                position: sticky;
+                top: 0;
+            }
+            .icon-wrap{
+                color:rgba(255, 255, 255, 0.5);
+                font-size: 1.2rem;
+                margin: 0 20px 10px;
+            }
+            .change-lang{
+                display: flex;
+                align-items: center;
+                /* 因為跟爸爸一樣高，所以下flex */
+                margin-left: 10px;
+                color: #fff;
+            }
+            .change-lang a, 
+            .change-lang span{
+                color:#fff;
+                font-size:.8rem;
+                margin-left: 10px;
+                /* 下了margin才能讓/跟字分開一點 */
+                /* 下margin-left可以讓上面語言跟下面會員卡專區對齊 */
+            }
+            .nav-links-area ul{
+                list-style: none;
+                /* 如果不靠bootstrap，要手刻改掉ul li前面的黑點就下這個 */
+                padding-left: 0;
+                /* ul前面有一小塊padding 可以下0改掉 */
+                margin: 0;
+            }
+            .nav-links-area li{
+                margin-left: 30px;
+                /* 推右邊的話會留白 */
+            }
+            .nav-links-area a{
+                color:#fff;
+            }
+            .mobile-menu-btn{
+                color: #fff;
+                font-size: 2rem;
+                align-self: center;
+                /* 因為row有flex 讓漢堡自己置中 */
+            }
+
+            /* 10:30重看 */
+            .banner{
+                height: 100vh;
+                background-size: 100%;
+                background-origin: content-box;
+            }
+            
+
+        </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="row justify-content-between">
+                <!-- 手機版：把漢堡跟logo往旁邊推開 但現在最右邊缺一個 所以底下再做一個空的div -->
+
+                <!-- 手刻 nav的RWD
+                    手機版的漢堡 -->
+                <a href="#" class="mobile-menu-btn d-block d-xl-none">
+                    <!-- 只要版面是xl以上就會漢堡就會消失 
+                        xl以下就會出現 -->
+                    <i class="fas fa-bars"></i>
+                </a>
+                <!-- 手機版的漢堡 -->
+
+
+                <div class="logo">
+                    <img src="./茶湯會/logo_h.png" alt="">
+                </div>
+
+                <div class="d-block d-xl-none"></div>
+                <!-- 為了讓手機版nav bar可以把logo置中 在最右邊放一個空的div -->
+
+                <div class="nav-right ml-auto d-none d-xl-block">
+                    <!-- 在某個斷點下讓他display block -->
+                    <div class="nav-icon-area d-flex justify-content-end align-items-center">
+                        <div class="icon-wrap">
+                            <i class="fab fa-facebook-square"></i>
+                        </div>
+                        <div class="icon-wrap">
+                            <i class="fab fa-line"></i>
+                        </div>
+                        <div class="icon-wrap">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+
+                        <div class="change-lang">
+                            <a href="#">繁體版</a> <span>/</span>
+                            <a href="#">簡體版</a> <span>/</span>
+                            <a href="#">ENGLISH</a> 
+                        </div>
+                    </div>
+                    <div class="nav-links-area">
+                        <ul class="d-flex">
+                            <li>
+                                <a href="#">最新消息</a>
+                            </li>
+                            <li>
+                                <a href="#">瞭解茶湯</a>
+                            </li>
+                            <li>
+                                <a href="#">茶湯點單</a>
+                            </li>
+                            <li>
+                                <a href="#">嚴選食材</a>
+                            </li>
+                            <li>
+                                <a href="#">門市專區</a>
+                            </li>
+                            <li>
+                                <a href="#">加盟專區</a>
+                            </li>
+                            <li>
+                                <a href="#">菁英招募</a>
+                            </li>
+                            <li>
+                                <a href="#">會員卡專區</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
