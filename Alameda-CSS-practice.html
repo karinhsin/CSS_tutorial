@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重刻Alameda官網</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 960px;
+            margin: 40px auto;
+            padding: 0 15px;
+        }
+
+        .row {
+            display: flex;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        .mb40 {
+            margin-bottom: 40px;
+        }
+        .nav-left,
+        .logo,
+        .nav-right {
+            /* width: 33%; */
+            width: 33.33333%;
+            /* 寬度都會一樣 */
+        }
+        .nav-left>a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+            /* margin-right: auto; */
+        }
+
+        .nav-right>i {
+            margin: 5px;
+        }
+
+        .buy-link {
+            background-color: #777;
+            text-decoration: none;
+            color: #fff;
+            align-self: center;
+            padding: 20px;
+        }
+
+        .img-300 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .img-300 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .sub-title{
+            width: 300px;
+            margin: 100px auto;
+            font-weight: bold;
+        }
+        .product-model{
+            width: 500px;
+            height: 700px;
+        }
+        .product-model img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .order1{
+            order:1;
+        }
+        .order2{
+            order:2;
+        }
+        .demo-model-left{
+            width: 70%;
+        }
+        .demo-model-left img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .demo-model-right{
+            width: 30%;
+        }
+        .demo-model-right img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row align-center mb40">
+            <div class="nav-left">
+                <a href="#">Shop</a>
+                <a href="#">Lookbook</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="logo">Alameda</div>
+            <div class="nav-right">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+        <div class="row space-between mb40">
+            <h2>New in</h2>
+            <a href="#" class="buy-link">Shop now</a>
+        </div>
+        <div class="row space-between">
+            <div class="items">
+                <div class="img-300">
+                    <img src="./flex-demo/product1.jpeg" alt="">
+                </div>
+                <p>Linen top / Blue</p>
+            </div>
+            <div class="items">
+                <div class="img-300">
+                    <img src="./flex-demo/product2.jpeg" alt="">
+                </div>
+                <p>Linen top / Blue</p>
+            </div>
+            <div class="items">
+                <div class="img-300">
+                    <img src="./flex-demo/product3.jpeg" alt="">
+                </div>
+                <p>Linen top / Blue</p>
+            </div>
+        </div>
+
+        <div class="row sub-title">
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+        </div>
+
+        <div class="row space-between mb40">
+            <div class="product-info">
+                <div class="img-300">
+                    <img src="./flex-demo/product4.jpeg" alt="">
+                </div>
+                
+                <p>Lisa Shirt</p>
+                <p>$50.00</p>
+            </div>
+
+            <div class="product-model">
+                <img src="./flex-demo/model1.jpeg" alt="">
+            </div>
+        </div>
+        <div class="row space-between mb40">
+            <div class="product-info order2">
+                <div class="img-300">
+                    <img src="./flex-demo/product5.jpeg" alt="">
+                </div>
+        
+                <p>Lisa Shirt</p>
+                <p>$50.00</p>
+            </div>
+            <div class="product-model order1">
+                <img src="./flex-demo/model2.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="demo-model-left">
+                <img src="./flex-demo/model3.jpeg" alt="">
+            </div>
+            <div class="demo-model-right">
+                <img src="./flex-demo/model4.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
